@@ -1,5 +1,5 @@
-const { CityService, CityService } = require('../services/index');
-
+const { CityService } = require('../services/index.js');
+ 
 const cityService = new CityService();
 
 const create = async (req, res) => {
@@ -18,7 +18,7 @@ const create = async (req, res) => {
             success: false,
             message: 'Not able to create a city',
             err: error
-        })
+        });
     }
 }
 
@@ -84,12 +84,8 @@ const update = async (req, res) => {
     }
 }
 
-module.exports = {
-    create,
-    destroy,
-    get,
-    update,
-}
+module.exports = CityService;
+   
     
 
 
