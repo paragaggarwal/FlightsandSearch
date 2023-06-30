@@ -1,5 +1,6 @@
 const { Op } = require('sequelize');
 
+
 const { City } = require('../models/index');
 
 class CityRepository {
@@ -80,7 +81,9 @@ class CityRepository {
             throw {error};
         }
     }
-
 }
+
+    
+           
 
 module.exports = CityRepository;
